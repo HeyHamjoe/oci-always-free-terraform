@@ -21,7 +21,7 @@ ssh_public_key = "ssh-ed25519 AbjlasdfljkAAC3asdf..."
 # Username for the host VMs.
 vm_username = ""
 
-# Add any startup script
+# Add a startup script.
 startup_script_url = ""
 
 # Optional: Preferred environment name
