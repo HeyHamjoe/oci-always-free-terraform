@@ -18,25 +18,23 @@ resource "oci_core_volume_backup_policy" "freelab_volume_backup_policy" {
   }
 }
 
-# Assign backup policy to boot volume(s).
-resource "oci_core_volume_backup_policy_assignment" "freelab_boot_volume_backup_policy_assignment" {
-  count     = var.x86_hosts + var.ampere_hosts
-  asset_id  = data.oci_core_boot_volumes.freelab_boot_volumes.boot_volumes[count.index].id
+# Assign backup policy to x86 boot volume(s).
+resource "oci_core_volume_backup_policy_assignment" "freelab_x86_boot_volume_backup_policy_assignment" {
+  count     = var.x86_hosts
+  asset_id  = oci_core_instance.vm_instance_x86_64[count.index].boot_volume_id
   policy_id = oci_core_volume_backup_policy.freelab_volume_backup_policy.id
-
-  depends_on = [  
-    oci_core_instance.vm_instance_x86_64,
-    oci_core_instance.vm_instance_ampere
-  ]
 }
 
-# Assign backup policy to block volume.
+# Assign backup policy to ampere boot volume(s).
+resource "oci_core_volume_backup_policy_assignment" "freelab_ampere_boot_volume_backup_policy_assignment" {
+  count     = var.ampere_hosts
+  asset_id  = oci_core_instance.vm_instance_ampere[count.index].boot_volume_id
+  policy_id = oci_core_volume_backup_policy.freelab_volume_backup_policy.id
+}
+
+# Assign backup policy to block volume(s).
 resource "oci_core_volume_backup_policy_assignment" "freelab_block_volume_backup_policy_assignment" {
   count     = var.block_volumes
   asset_id  = data.oci_core_volume.freelab_block_volume[count.index].id
   policy_id = oci_core_volume_backup_policy.freelab_volume_backup_policy.id
-
-  depends_on = [
-    oci_core_volume.freelab_block_volume
-  ]
 }
