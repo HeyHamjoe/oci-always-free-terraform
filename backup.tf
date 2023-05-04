@@ -24,9 +24,9 @@ resource "oci_core_volume_backup_policy_assignment" "freelab_boot_volume_backup_
   asset_id  = data.oci_core_boot_volumes.freelab_boot_volumes.boot_volumes[count.index].id
   policy_id = oci_core_volume_backup_policy.freelab_volume_backup_policy.id
 
-# Something funky going on here.  Have to apply terraform twice to get policy to assign.
-  depends_on = [
-    data.oci_core_boot_volumes.freelab_boot_volumes
+  depends_on = [  
+    oci_core_instance.vm_instance_x86_64,
+    oci_core_instance.vm_instance_ampere
   ]
 }
 
@@ -36,7 +36,7 @@ resource "oci_core_volume_backup_policy_assignment" "freelab_block_volume_backup
   asset_id  = data.oci_core_volume.freelab_block_volume[count.index].id
   policy_id = oci_core_volume_backup_policy.freelab_volume_backup_policy.id
 
-#  depends_on = [
-#    oci_core_volume.freelab_block_volume
-#  ]
+  depends_on = [
+    oci_core_volume.freelab_block_volume
+  ]
 }
