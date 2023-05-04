@@ -20,7 +20,7 @@ ssh_private_key_path    = "" # Example: "/home/HeyHamjoe/freelab_ssh_private_key
 # Username for the host VMs.
 vm_username             = "" # Example: "ubuntu"
 
-# Startup script for the VMs to run after boot.
+# Startup script for the VMs to run after boot. If undesired, comment this line out and delete remote-exec.tf file.
 startup_script_url      = "" # Example: "https://blahblahtoken12345@raw.githubusercontent.com/user/repo/main/ubuntu_startup.sh"
 
 # Environment name.
