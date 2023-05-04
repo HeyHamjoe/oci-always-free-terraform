@@ -23,7 +23,7 @@ vm_username             = "" # Example: "ubuntu"
 # Startup script for the VMs to run after boot.
 startup_script_url      = "" # Example: "https://blahblahtoken12345@raw.githubusercontent.com/user/repo/main/ubuntu_startup.sh"
 
-# Optional: Preferred environment name
+# Environment name.
 compartment_name        = "freelab"
 vm_name                 = "freelab"
 tags                    = { Project = "freelab" }
