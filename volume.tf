@@ -5,7 +5,7 @@ resource "oci_core_volume" "freelab_block_volume" {
   availability_domain  = var.ad
   display_name         = join("-", [var.vm_name, "block", "volume"])
   freeform_tags        = var.tags
-  size_in_gbs          = 59
+  size_in_gbs          = 50
   is_auto_tune_enabled = true
 }
 
