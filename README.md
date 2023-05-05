@@ -1,5 +1,6 @@
 # Oracle Cloud Infrastructure - Free Lab
 Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be somewhat difficult to understand and configure using the web console.  This is a terraform plan that, after setting a few variables, should create the environment and most of the resources for you.  Hopefully it's helpful in getting your free lab up and running quickly!
+
 [Oracle Cloud Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm)
 
 ## What is currently created?
@@ -25,9 +26,11 @@ Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be 
    * `api_private_key_path`
    * `fingerprint`
    * `region`
+   
    If you don't already have a public/private key pair, follow instructions [here](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two).
 3. For `ad`, we're looking for the availability domain to deploy resources to.  Many regions only have 1, but some have 3.  This can be found by going to the OCI Web console and clicking on Compute > Instances.  They should be listed at the bottom left corner.
-4. Choose how many and the mix of hosts.  I recommend two `x86_hosts` and one `ampere_hosts`.  Some regions and availability domains are very difficult to create an ampere instance in due to the popularity and free tier capacity of that instance type.  If it's causing problems, you may have to set ampere to zero and try later.
+4. Choose how many and the mix of hosts.  I recommend two `x86_hosts` and one `ampere_hosts`.  
+Note: Some regions and availability domains are very difficult to create an ampere instance in due to the popularity and free tier capacity of that instance type.  If it's causing problems, you may have to set ampere to zero and try later.  Another option is to upgrade your OCI account to a Pay As You Go.  Everything here should still all be free, but it does open you up to accidentally incurring costs if you make mistake.
 5. Choose to create separate `block_volumes` or not.  The free tier account allows for 200 GB of total block/boot storage, so if you create 3 hosts theres 50 GB left for a block volume to attach to one of the hosts.  I have not paramaterized it yet, but you can edit the volume.tf file to attach the block volume to a host.
 6. For `vm_image_ocid_x86_64` and `vm_image_ocid_ampere`, go to the [OCI images site](https://docs.oracle.com/en-us/iaas/images/all/) to find the operating system you want and the chosen region.
 7. `ssh_public_key` is given in string format and will be placed on each host to allow SSH authentication. It can be the same as the API keys, but it's best security practice to use different keys.
