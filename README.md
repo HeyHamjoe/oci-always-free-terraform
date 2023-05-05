@@ -3,6 +3,10 @@ Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be 
 
 [Oracle Cloud Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm)
 
+If you'd like to show some support...
+
+[!["Buy me a coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/HeyHamjoe)
+
 ## What is currently created?
 * Compartment for all the resources to live.
 * Virtual Cloud Network, with public subnet and DHCP options.
@@ -46,5 +50,3 @@ You could add some additional firewall rules in the firewall.tf file, or work on
 Some of this OCI and terraform isn't documented as well as other cloud environments, and it's a bit hard to search for forums when you hit a roadblock.  Most information I found was spread far and wide across the net, and most of the time only partially working, but it still saved me a good bit of effort.  So, special thanks to all who came before me and gave some good examples and ideas to start with!
 
 ## I like coffee!
-If you'd like to show some support in a more tangible fashion...
-[!["Buy me a coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/HeyHamjoe)
