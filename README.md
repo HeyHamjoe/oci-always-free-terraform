@@ -1,4 +1,4 @@
-# Oracle Cloud Infrastructure - Free Lab
+# Oracle Cloud Infrastructure - Always Free Lab
 Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be somewhat difficult to understand and configure using the web console.  This is a terraform plan that, after setting a few variables, should create the environment and most of the resources for you.  Hopefully it's helpful in getting your free lab up and running quickly!
 
 [Oracle Cloud Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm)
