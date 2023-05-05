@@ -48,5 +48,3 @@ You could add some additional firewall rules in the firewall.tf file, or work on
 
 ## Thanks 
 Some of this OCI and terraform isn't documented as well as other cloud environments, and it's a bit hard to search for forums when you hit a roadblock.  Most information I found was spread far and wide across the net, and most of the time only partially working, but it still saved me a good bit of effort.  So, special thanks to all who came before me and gave some good examples and ideas to start with!
-
-## I like coffee!
