@@ -22,7 +22,7 @@ Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be 
 2. We will be using API Key Authentication, so use instructions [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraformproviderconfiguration.htm#APIKeyAuth) to get the following credentials so we can connect to the right account:
    * `tenancy_ocid`
    * `user_ocid`
-   * `private_key_path`
+   * `api_private_key_path`
    * `fingerprint`
    * `region`
    If you don't already have a public/private key pair, follow instructions [here](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm#two).

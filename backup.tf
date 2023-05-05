@@ -6,11 +6,11 @@ resource "oci_core_volume_backup_policy" "freelab_volume_backup_policy" {
 
   schedules {
     backup_type       = "INCREMENTAL"
-    day_of_month      = 1
-    day_of_week       = "FRIDAY"
-    hour_of_day       = 3
-    month             = "JANUARY"
-    offset_seconds    = 0
+#    day_of_month      = 1
+    day_of_week       = "SUNDAY"
+    hour_of_day       = 5
+#    month             = "JANUARY"
+#    offset_seconds    = 0
     offset_type       = "STRUCTURED"
     period            = "ONE_WEEK"
     retention_seconds = 3024000 # 5 weeks

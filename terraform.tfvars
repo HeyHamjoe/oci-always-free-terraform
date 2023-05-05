@@ -1,7 +1,7 @@
 # Check the README.md for help finding these.
 tenancy_ocid            = "" # Example: "ocid1.tenancy.oc1..aaa928979..."
 user_ocid               = "" # Example: "ocid1.user.oc1..aaa928979..."
-private_key_path        = "" # Example: "/home/HeyHamjoe/oci_api_private_key.pem"
+api_private_key_path    = "" # Example: "/home/HeyHamjoe/oci_api_private_key.pem"
 fingerprint             = "" # Example: "51:b4:24:cd:ad:6c:..."
 region                  = "" # Example: "us-phoenix-1"
 ad                      = "" # Example: "Uocm:PHX-AD-1"
