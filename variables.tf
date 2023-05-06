@@ -78,8 +78,8 @@ variable "tags" {
   type        = map(any)
 }
 
-variable "startup_script_url" {
-  description = "URL for custom startup script."
+variable "startup_script_path" {
+  description = "Local path for custom startup script."
   type        = string
 }
 

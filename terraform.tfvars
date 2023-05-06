@@ -17,10 +17,10 @@ vm_image_ocid_ampere    = "" # Ubuntu 22.04 aarch64 minimal Phoenix Example: "oc
 ssh_public_key          = "" # Example: "ssh-ed25519 AbjlasdfljkAAC3asdf... freelab"
 
 
-# Remote-exec configuration (optional). After the hosts are created, the remote-exec will log into the host with the username and SSH private key to download and execute a startup script.
+# Remote-exec configuration (optional). After the hosts are created, the remote-exec will log into the host with the username and SSH private key to upload and execute your startup script.
 # If undesired, comment these lines out and delete remote-exec.tf file.
 vm_username             = "" # Example: "ubuntu"
-startup_script_url      = "" # Example: "https://blahblahtoken12345@raw.githubusercontent.com/user/repo/main/ubuntu_startup.sh"
+startup_script_url      = "" # Example: "/home/HeyHamjoe/ubuntu_startup_script.sh"
 ssh_private_key_path    = "" # Example: "/home/HeyHamjoe/freelab_ssh_private_key.pem"
 
 # Environment name.
