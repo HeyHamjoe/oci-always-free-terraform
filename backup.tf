@@ -13,7 +13,7 @@ resource "oci_core_volume_backup_policy" "freelab_volume_backup_policy" {
 #    offset_seconds    = 0
     offset_type       = "STRUCTURED"
     period            = "ONE_WEEK"
-    retention_seconds = 3024000 # 5 weeks
+    retention_seconds = 604800 # 1 week
     time_zone         = "REGIONAL_DATA_CENTER_TIME"
   }
 }

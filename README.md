@@ -14,7 +14,7 @@ If you'd like to show some support...
 * Up to two x86 compute servers (VM.Standard.E2.1.Micro) with 1 CPU, 1 GB RAM, and 50 GB boot disk.
 * Up to one ampere aarch64 compute servers (VM.Standard.A1.Flex) with 4 CPU, 24 GB RAM, and 50 GB boot disk.
 * One 50 GB block volume storage that can be attached to a VM.
-* A volume backup policy that will keep 5 rolling backups of all boot and block volumes.
+* A volume backup policy that will take a weekly backup of all boot and block volumes.  These backups also expire weekly since only 5 total backups are allowed.
 
 ## Requirements
 * An OCI Free Tier [account](https://signup.cloud.oracle.com/).
