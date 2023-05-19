@@ -35,7 +35,7 @@ resource "null_resource" "remote-exec-x86" {
       "echo '[Script begin]' >> ~/logs",
       join(" ", ["echo $(echo | date)\"",oci_core_instance.vm_instance_x86_64[count.index].display_name,oci_core_instance.vm_instance_x86_64[count.index].public_ip,"\">> logs"]),
       
-      #Execute the startup script. Comment these lines out if preferred.
+      # Execute the startup script.
       "echo '[Execute script]' >> ~/logs",
       "chmod +rwx ~/my_startup_script.sh",
       "./my_startup_script.sh >> ~/logs",
@@ -81,7 +81,7 @@ resource "null_resource" "remote-exec-ampere" {
       "echo '[Script begin]' >> ~/logs",
       join(" ", ["echo $(echo | date)\"",oci_core_instance.vm_instance_ampere[count.index].display_name,oci_core_instance.vm_instance_ampere[count.index].public_ip,"\">> logs"]),
       
-      # Download and execute a remote script using curl. Comment these lines out if preferred.
+      # Execute the startup script.
       "echo '[Execute script]' >> ~/logs",
       "chmod +rwx ~/my_startup_script.sh",
       "./my_startup_script.sh >> ~/logs",

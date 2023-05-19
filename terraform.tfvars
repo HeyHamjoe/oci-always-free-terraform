@@ -20,7 +20,7 @@ ssh_public_key          = "" # Example: "ssh-ed25519 AbjlasdfljkAAC3asdf... free
 # Remote-exec configuration (optional). After the hosts are created, the remote-exec will log into the host with the username and SSH private key to upload and execute your startup script.
 # If undesired, comment these lines out and delete remote-exec.tf file.
 vm_username             = "" # Example: "ubuntu"
-startup_script_url      = "" # Example: "/home/HeyHamjoe/ubuntu_startup_script.sh"
+startup_script_path     = "" # Example: "/home/HeyHamjoe/ubuntu_startup_script.sh"
 ssh_private_key_path    = "" # Example: "/home/HeyHamjoe/freelab_ssh_private_key.pem"
 
 # Environment name.
