@@ -20,10 +20,12 @@ tags                    = { Project = "freelab" }
 # OCI API key and SSH Private key.  Enter the key information between EOT statements.
 # API private key is used connect to and manage OCI.
 api_private_key         = <<EOT
+
 EOT
 
 # SSH public key to be placed on the hosts.
 ssh_public_key          = <<EOT
+
 EOT
 
 # Remote-exec configuration (optional). After the hosts are created, the remote-exec will log into the host with the username and SSH private key to upload and execute your startup script.
@@ -31,4 +33,5 @@ EOT
 vm_username             = "" # Example: "ubuntu"
 startup_script_path     = "" # Example: "/home/HeyHamjoe/ubuntu_startup_script.sh"
 ssh_private_key         = <<EOT
+
 EOT
