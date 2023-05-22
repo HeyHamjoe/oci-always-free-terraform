@@ -29,7 +29,7 @@ ssh_public_key          = <<EOT
 EOT
 
 # Remote-exec configuration (optional). After the hosts are created, the remote-exec will log into the host with the username and SSH private key to upload and execute your startup script.
-# If undesired, comment these lines out and delete remote-exec.tf file.
+# If desired, provide the below values and rename the remote-exec.tf.example file.
 vm_username             = "" # Example: "ubuntu"
 startup_script_path     = "" # Example: "/home/HeyHamjoe/ubuntu_startup_script.sh"
 ssh_private_key         = <<EOT
