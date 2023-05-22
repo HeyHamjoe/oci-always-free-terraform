@@ -58,13 +58,13 @@ variable "fingerprint" {
   type        = string
 }
 
-variable "api_private_key_path" {
-  description = "The location of the OCI API private key."
+variable "api_private_key" {
+  description = "The OCI API private key."
   type        = string
 }
 
-variable "ssh_private_key_path" {
-  description = "The location fo the SSH prviate key."
+variable "ssh_private_key" {
+  description = "The SSH private key."
   type        = string
 }
 

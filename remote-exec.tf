@@ -14,7 +14,7 @@ resource "null_resource" "remote-exec-x86" {
       timeout     = "30m"
       host        = oci_core_instance.vm_instance_x86_64[count.index].public_ip
       user        = var.vm_username
-      private_key = file("${var.ssh_private_key_path}")
+      private_key = file("${var.ssh_private_key}")
   }
   
   # The local path of the startup script, and the remote path to place it.
@@ -60,7 +60,7 @@ resource "null_resource" "remote-exec-ampere" {
       timeout     = "30m"
       host        = oci_core_instance.vm_instance_ampere[count.index].public_ip
       user        = var.vm_username
-      private_key = file("${var.ssh_private_key_path}")
+      private_key = file("${var.ssh_private_key}")
   }
 
   # The local path of the startup script, and the remote path to place it.
