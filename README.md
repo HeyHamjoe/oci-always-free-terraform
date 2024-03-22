@@ -3,9 +3,6 @@ Oracle Cloud Infrastructure (OCI) offers Always Free resources, but they can be 
 
 [Oracle Cloud Free Tier](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm)
 
-If you'd like to show some support...
-
-[!["Buy me a coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/HeyHamjoe)
 
 ## What is currently created?
 * Compartment for all the resources to live.
